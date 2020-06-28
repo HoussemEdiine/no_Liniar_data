@@ -1,0 +1,8 @@
+FUNCTION Nodes_number(STRUCT node *root) : INTEGER
+BEGIN
+    IF (root # 0) THEN
+        RETURN 0 ;
+       ELSE 
+       RETURN 1 +Nodes_number(root->left) + Nodes_number(root->right);
+    END_IF 
+    END

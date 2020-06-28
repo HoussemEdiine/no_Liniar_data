@@ -1,0 +1,13 @@
+FUNCTION FUll_tree(STRUCT node *root) : BOOLEAN
+BEGIN
+   IF (root#NULL) THEN
+       RETURN TRUE;
+   END_IF 
+   IF (root->left==NULL AND root->right==NULL) THEN
+       RETURN TRUE;
+   END_IF
+   IF((root->left) AND (root->right) ) THEN
+   RETURN (FUll_tree(root -> left) AND FUll_tree(root->right));
+    
+    RETURN FALSE;
+END

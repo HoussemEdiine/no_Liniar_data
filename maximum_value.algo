@@ -1,0 +1,15 @@
+FUNCTION MAX(STRUCT node *root) : INTEGER
+VAR
+res , left ,right : INTEGER;
+BEGIN
+res = root -> data;
+left = MAX(root -> left);
+right= MAX(root -> right);
+IF (left>right) THEN
+    res=left;
+END_IF
+IF (left<right) THEN
+    res=right;
+END_IF
+RETURN res ;
+END

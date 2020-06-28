@@ -1,0 +1,18 @@
+FUNCTION height( STRUCT node *root) : INTEGER
+VAR
+left , right , h : INTEGER;
+BEGIN 
+IF (root#0) THEN
+    RETURN 0 ;
+END_IF
+left := height(root->left);
+right := height(root->right);
+IF (left > right) THEN
+    h=1+left ;
+    ELSE 
+    h= 1 + right ;
+
+END_IF
+RETURN h;
+    
+END

@@ -1,0 +1,19 @@
+FUNCTION leaf_count(STRUCT node *root) : INTEGER
+VAR
+count : INTEGER := 0;
+BEGIN
+IF (root) THEN
+    {
+    IF (root->left#NULL AND root->right#NULL) THEN
+        count = coutn + 1 ;
+        ELSE 
+        IF (root -> left) THEN
+            leaf_count(root->left);
+        END_IF
+        IF (root->right) THEN
+            leaf_count(root->right);
+        END_IF
+    END_IF
+    }
+END_IF
+END
